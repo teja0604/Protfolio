@@ -1,0 +1,101 @@
+@import "../../_globalColor.scss";
+
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 80vh;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: $subTitle;
+  text-decoration: none;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: $textColor;
+}
+
+.dark-mode-link {
+  color: #8b8a91;
+}
+
+.dark-mode-link:hover {
+  color: #fff;
+}
+
+.blog-post-content {
+  background-color: transparent;
+}
+
+.blog-post-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: $textColor;
+}
+
+.blog-post-date {
+  font-size: 1rem;
+  color: $subTitle;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.blog-post-body {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: $textColor;
+}
+
+.blog-post-body h3 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: $textColor;
+}
+
+.blog-post-body p {
+  margin-bottom: 20px;
+  color: $subTitle;
+  line-height: 1.8;
+}
+
+.blog-post-body ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
+  color: $subTitle;
+}
+
+.blog-post-body li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.dark-mode-content .blog-post-title,
+.dark-mode-content .blog-post-body h3,
+.dark-mode-content .blog-post-body {
+  color: #fff;
+}
+
+.dark-mode-content .blog-post-date,
+.dark-mode-content .blog-post-body p,
+.dark-mode-content .blog-post-body ul {
+  color: #8b8a91;
+}
+
+@media (max-width: 768px) {
+  .blog-post-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-post-body {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../_globalColor";
+
+.journey-header-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.journey-subtitle {
+  text-align: center;
+  margin-top: -1.5rem;
+}
+
+.timeline-date-light {
+  color: #000 !important;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.timeline-date-dark {
+  color: #fff !important;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.vertical-timeline-element-content {
+  border-radius: 16px !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease !important;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-mode .vertical-timeline-element-content:hover {
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1) !important;
+}

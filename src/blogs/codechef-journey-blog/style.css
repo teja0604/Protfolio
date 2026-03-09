@@ -1,0 +1,137 @@
+.blog-page-isolated {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 80vh;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #868e96;
+  text-decoration: none;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.dark-mode-link {
+  color: #8b8a91;
+}
+
+.dark-mode-link:hover {
+  color: #fff;
+}
+
+.blog-wrapper {
+  background-color: transparent;
+}
+
+.blog-title-header {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #868e96;
+  font-style: italic;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.blog-author {
+  font-weight: bold;
+}
+
+.blog-body-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #000;
+}
+
+.blog-body-text h3 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.blog-body-text p {
+  margin-bottom: 20px;
+  color: #868e96;
+  line-height: 1.8;
+}
+
+.dark-mode-wrapper .blog-title-header,
+.dark-mode-wrapper .blog-body-text h3,
+.dark-mode-wrapper .blog-body-text {
+  color: #fff;
+}
+
+.dark-mode-wrapper .blog-meta {
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode-wrapper .blog-body-text p {
+  color: #8b8a91;
+}
+
+@media (max-width: 1024px) {
+  .blog-page-isolated {
+    padding: 30px 15px;
+  }
+  .blog-title-header {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-title-header {
+    font-size: 2.1rem;
+  }
+  .blog-body-text {
+    font-size: 1.05rem;
+  }
+  .blog-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .code-block {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-title-header {
+    font-size: 1.8rem;
+  }
+  .blog-body-text h3 {
+    font-size: 1.5rem;
+  }
+  .blog-page-isolated {
+    padding: 20px 10px;
+  }
+  .back-btn {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .code-block {
+    font-size: 0.85rem;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: scroll;
+  }
+}

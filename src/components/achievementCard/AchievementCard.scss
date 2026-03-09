@@ -1,0 +1,95 @@
+@import "../../_globalColor";
+
+.card-image {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.card-title {
+  color: $titleColor;
+  font-size: 1.375rem;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 15px 0 0 0;
+}
+.card-subtitle {
+  color: $cardSubtitle;
+  font-size: 1.063rem;
+  line-height: 1.5rem;
+  white-space: pre-wrap;
+}
+.certificate-card {
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+.certificate-detail-div {
+  text-align: center;
+}
+.certificate-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+.certificate-card:active {
+  transform: scale(0.97) rotateY(4deg) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+.certificate-card:hover .card-image {
+  transform: scale(1.08);
+}
+.dark-mode.certificate-card:hover {
+  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+}
+.certificate-image-div {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.achievement-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+.certificate-card-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.certificate-card-footer span.certificate-tag {
+  background: $buttonColor;
+  color: $lightBackground3;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0 0.75em;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+span.certificate-tag:hover {
+  background: $buttonHover;
+}
