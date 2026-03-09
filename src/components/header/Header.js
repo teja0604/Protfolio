@@ -50,7 +50,7 @@ function Header() {
   const viewResume = resumeSection.display;
 
   return (
-    <Headroom>
+    <Headroom style={{zIndex: 999999}}>
       <header className={isDark ? "dark-menu header" : "header"}>
         <a href="/" className="logo">
           <span className="grey-color"> &lt;</span>

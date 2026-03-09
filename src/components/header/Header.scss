@@ -84,14 +84,14 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 75%;
+  width: 85%;
   height: 100vh;
   margin: 0;
   padding-top: 80px;
   background-color: $lightBackground1;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease-in-out;
-  z-index: 999;
+  transition: right 0.4s ease-in-out;
+  z-index: 100000;
   display: flex !important;
   flex-direction: column;
 }
@@ -107,10 +107,10 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  display: none;
+  z-index: 99999;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .dark-overlay {
@@ -121,12 +121,12 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
+  display: block;
   float: right;
   padding: 28px 20px;
   position: relative;
   user-select: none;
-  z-index: 1000;
+  z-index: 100001;
 }
 
 .header .menu-icon .navicon {
@@ -184,7 +184,7 @@
 }
 
 .header .menu-btn:checked ~ .menu-overlay {
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -238,6 +238,7 @@
   }
   .menu-overlay {
     display: none !important;
+    visibility: hidden !important;
   }
   .header .menu-icon {
     display: none;
