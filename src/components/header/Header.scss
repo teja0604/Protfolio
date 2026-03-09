@@ -38,11 +38,21 @@
   color: $subTitle;
 }
 
+.header li {
+  width: 100%;
+}
+
 .header li a {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 30px;
   color: $textColor;
   text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.dark-menu li a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .header li a:hover,
@@ -71,9 +81,40 @@
 /* menu */
 
 .header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+  background-color: $lightBackground1;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.dark-menu.menu {
+  background-color: $darkBackground !important;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* menu icon */
@@ -85,6 +126,7 @@
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  z-index: 1000;
 }
 
 .header .menu-icon .navicon {
@@ -137,7 +179,13 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 486px;
+  right: 0;
+  max-height: none;
+}
+
+.header .menu-btn:checked ~ .menu-overlay {
+  display: block;
+  opacity: 1;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -162,6 +210,15 @@
 @media (min-width: 48em) {
   .header li {
     float: left;
+    width: auto;
+  }
+  .header li a {
+    border-bottom: none;
+    padding: 15px 20px;
+    font-size: inherit;
+  }
+  .dark-menu li a {
+    border-bottom: none !important;
   }
   .header {
     display: flex;
@@ -169,7 +226,18 @@
     justify-content: space-between;
   }
   .header .menu {
-    max-height: none;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+    box-shadow: none;
+    background-color: transparent !important;
+    transition: none;
+    z-index: auto;
+  }
+  .menu-overlay {
+    display: none !important;
   }
   .header .menu-icon {
     display: none;

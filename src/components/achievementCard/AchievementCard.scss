@@ -93,3 +93,9 @@
 span.certificate-tag:hover {
   background: $buttonHover;
 }
+
+@media (max-width: 480px) {
+  .achievement-cards-div {
+    grid-template-columns: 1fr;
+  }
+}

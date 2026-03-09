@@ -62,3 +62,15 @@
     order: 2;
   }
 }
+
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 24px;
+  }
+  .skills-text-subtitle {
+    font-size: 14px;
+  }
+  .skills-text {
+    font-size: 14px;
+  }
+}

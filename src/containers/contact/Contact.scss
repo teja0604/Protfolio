@@ -80,3 +80,13 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 30px;
+  }
+  .contact-detail,
+  .contact-detail-email {
+    font-size: 16px;
+  }
+}

@@ -21,6 +21,10 @@ function Header() {
 
   const onNavClick = (e, targetId) => {
     e.preventDefault();
+    const menuBtn = document.getElementById("menu-btn");
+    if (menuBtn) {
+      menuBtn.checked = false;
+    }
     if (window.location.hash !== "#/") {
       history.push("/");
       setTimeout(() => {
@@ -61,6 +65,15 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
+        <div 
+          className={isDark ? "menu-overlay dark-overlay" : "menu-overlay"} 
+          onClick={() => {
+            const menuBtn = document.getElementById("menu-btn");
+            if (menuBtn) {
+              menuBtn.checked = false;
+            }
+          }}
+        ></div>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
