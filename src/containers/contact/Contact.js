@@ -1,102 +1,150 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./Contact.scss";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {illustration, contactInfo} from "../../portfolio";
+import { illustration, contactInfo } from "../../portfolio";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_id", // Placeholder - User needs to update
-      "template_id", // Placeholder - User needs to update
-      e.target,
-      "public_key" // Placeholder - User needs to update
-    ).then(
-      () => {
-        alert("Message sent successfully!");
-        e.target.reset();
-      },
-      () => {
-        alert("Failed to send message. Please try again later.");
-      }
-    );
+    emailjs
+      .sendForm("service_id", "template_id", e.target, "public_key")
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          e.target.reset();
+        },
+        () => {
+          alert("Failed to send message. Please try again later.");
+        }
+      );
   };
+
+  /* ---------- THEME STYLES ---------- */
+
+  const formCardStyle = {
+    background: isDark ? "#181a1f" : "#fdfdfd",
+    boxShadow: isDark
+      ? "0 10px 40px rgba(0,0,0,0.5)"
+      : "0 10px 40px rgba(0,0,0,0.1)",
+    border: isDark
+      ? "1px solid rgba(255,255,255,0.06)"
+      : "1px solid rgba(0,0,0,0.08)",
+  };
+
+  const fieldStyle = {
+    width: "100%",
+    display: "block",
+    padding: "16px 20px",
+    borderRadius: "10px",
+    fontSize: "16px",
+    fontFamily: "inherit",
+    outline: "none",
+    boxSizing: "border-box",
+    background: isDark ? "#232730" : "#ffffff",
+    color: isDark ? "#ffffff" : "#111111",
+    border: isDark
+      ? "1px solid rgba(255,255,255,0.1)"
+      : "1px solid rgba(0,0,0,0.15)",
+  };
+
+  const labelColor = isDark ? "#a0a0a0" : "#666666";
+  const titleColor = isDark ? "#ffffff" : "#111111";
+  const textColor = isDark ? "#c9c9c9" : "#444444";
 
   return (
     <div className="main contact-margin-top" id="contact">
       <div className="contact-container">
+
+        {/* LEFT SECTION */}
+
         <div className="contact-header">
-          <p className="contact-label">CONTACT</p>
-          <h1 className="heading contact-title">
+          <p className="contact-label" style={{ color: labelColor }}>
+            CONTACT
+          </p>
+
+          <h1 className="heading contact-title" style={{ color: titleColor }}>
             Let's Build <br />
-            <span className="highlight">Something</span> <br />
-            Impactful
+            <span className="contact-gradient-text">Something</span> <br />
+            <span className="contact-gradient-text">Impactful</span>
           </h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode contact-subtitle"
-                : "subTitle contact-subtitle"
-            }
-          >
+
+          <p className="contact-subtitle" style={{ color: textColor }}>
             {contactInfo.description}
           </p>
+
           <div className="contact-links">
-            <a href={`mailto:${contactInfo.email}`} className="contact-link">
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className="contact-link"
+              style={{ color: titleColor }}
+            >
+              <span className="contact-icon">✉️</span>
               {contactInfo.email}
             </a>
+
             <a
               href={contactInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
+              style={{ color: titleColor }}
             >
+              <span className="contact-icon">💼</span>
               LinkedIn Profile
             </a>
           </div>
         </div>
+
+        {/* RIGHT SECTION */}
+
         <div className="contact-form-wrapper">
-          <form 
-            className={`contact-form ${isDark ? "dark-mode-form" : "light-mode-form"}`} 
+
+          <form
+            className="contact-form"
+            style={formCardStyle}
             onSubmit={sendEmail}
           >
-            <div className="form-field">
-              <input
-                type="text"
-                name="user_name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
 
-            <div className="form-field">
-              <input
-                type="email"
-                name="user_email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              style={fieldStyle}
+            />
 
-            <div className="form-field">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-              />
-            </div>
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              required
+              style={fieldStyle}
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              style={{
+                ...fieldStyle,
+                height: "160px",
+                resize: "vertical"
+              }}
+            />
 
             <button type="submit" className="send-btn">
               Send Message →
             </button>
+
           </form>
+
+          {/* CONTACT IMAGE */}
 
           <div className="contact-image-div">
             {illustration.animated ? (
@@ -108,7 +156,9 @@ export default function Contact() {
               />
             )}
           </div>
+
         </div>
+
       </div>
     </div>
   );
