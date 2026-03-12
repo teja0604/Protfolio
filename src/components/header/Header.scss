@@ -130,7 +130,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: $iconBackground;
+  background: $textColor;
   display: block;
   height: 2px;
   position: relative;
@@ -139,7 +139,7 @@
 }
 
 .header .menu-icon .navicon-dark {
-  background: $textColorDark;
+  background: $textColorDark !important;
 }
 
 .header .menu-icon .navicon:before,

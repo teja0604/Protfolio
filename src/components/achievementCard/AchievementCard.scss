@@ -3,8 +3,9 @@
 .card-image {
   max-width: 100%;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -28,38 +29,89 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  padding: 1.5rem;
-  border-radius: 16px;
+  padding: 2rem;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
+.glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover .glare {
+  opacity: 1;
+}
+
 .certificate-detail-div {
   text-align: center;
-}
-.certificate-card:hover {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-}
-.certificate-card:active {
-  transform: scale(0.97) rotateY(4deg) !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
-}
-.certificate-card:hover .card-image {
-  transform: scale(1.08);
-}
-.dark-mode.certificate-card:hover {
-  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
-}
-.certificate-image-div {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border-color: $buttonColor;
+}
+
+.certificate-card:hover .card-title {
+  color: $buttonColor;
+}
+
+.dark-mode.certificate-card:hover {
+  box-shadow: 0 20px 50px rgba(71, 163, 224, 0.15); // Subtle blue glow
+}
+
+.card-description {
+  color: $textColor;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dark-mode.card-description {
+  color: $textColorDark;
+}
+
+.certificate-button-div {
+  margin-top: 1rem;
+}
+
+.view-cert-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: $buttonColor;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-cert-btn:hover {
+  transform: scale(1.05);
+  background-color: $buttonHover;
+  box-shadow: 0 6px 20px rgba(71, 163, 224, 0.4);
 }
 .achievement-cards-div {
   display: grid;

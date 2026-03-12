@@ -6,6 +6,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "colorthief": "^2.3.0",
+    "emailjs-com": "^3.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "^2.1.1",

@@ -60,7 +60,7 @@ export default function Chatbot() {
 
   const handleQuestionClick = (qa) => {
     setMessages((prev) => [...prev, { sender: "user", text: qa.question }]);
-    
+
     // Simulate slight delay for bot reply
     setTimeout(() => {
       setMessages((prev) => [...prev, { sender: "bot", text: qa.answer }]);
@@ -89,8 +89,8 @@ export default function Chatbot() {
             <p className="options-title">Frequently Asked Questions:</p>
             <div className="options-container">
               {FAQ.map((qa, index) => (
-                <button 
-                  key={index} 
+                <button
+                  key={index}
                   className="option-chip"
                   onClick={() => handleQuestionClick(qa)}
                 >

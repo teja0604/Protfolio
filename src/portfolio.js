@@ -251,51 +251,51 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "Maths Club President",
-      subtitle:
-        "📍 Sathyabama University \n\nLed the Sathyabama Math Club, organizing competitive events, fostering problem-solving skills, and coordinating mathematical activities for students.",
+      subtitle: "📍 Sathyabama University",
+      description: "Led the Sathyabama Math Club, organizing competitive events, fostering problem-solving skills, and coordinating mathematical activities for students.",
       image: mathClubLogo,
       imageAlt: "Maths club",
-      footerLink: []
+      footer: []
     },
     {
       title: "MathArena",
-      subtitle:
-        "📍 Sathyabama University \n\nOrganized and coordinated MathArena, a competitive mathematics and problem-solving event conducted through the university Math Club.",
+      subtitle: "📍 Sathyabama University",
+      description: "Organized and coordinated MathArena, a competitive mathematics and problem-solving event conducted through the university Math Club.",
       image: mathArena,
       imageAlt: "MathArena",
-      footerLink: []
+      footer: []
     },
     {
-      title: "LuminaryAward",
-      subtitle:
-        "📍 Sathyabama University \n\nReceived the Luminary Award for academic excellence, coding achievements, and contributions to student technical activities.",
+      title: "Luminary Award",
+      subtitle: "📍 Sathyabama University",
+      description: "Received the Luminary Award for academic excellence, coding achievements, and contributions to student technical activities.",
       image: luminaryAward,
       imageAlt: "LuminaryAward",
-      footerLink: []
+      footer: []
     },
     {
       title: "NPTEL Java Certification",
-      subtitle:
-        "Successfully completed the NPTEL Java Programming certification course with strong understanding of Java fundamentals and object-oriented programming.",
+      subtitle: "📍 NPTEL / SWAYAM",
+      description: "Successfully completed the NPTEL Java Programming certification course with strong understanding of Java fundamentals and object-oriented programming.",
       image: nptelJava,
       imageAlt: "NPTEL Java",
-      footerLink: []
+      footer: []
     },
     {
       title: "One Week One Program Winner",
-      subtitle:
-        "📍 Sathyabama University \n\nWon the One Week One Program coding challenge by solving programming problems consistently throughout the competition.",
+      subtitle: "📍 Sathyabama University",
+      description: "Won the One Week One Program coding challenge by solving programming problems consistently throughout the competition.",
       image: oneWeekOneProgram,
       imageAlt: "One Week Winner",
-      footerLink: []
+      footer: []
     },
     {
       title: "Competitive Coding Achievement",
-      subtitle:
-        "Achieved a milestone of solving 1009 problems with 613 active coding days across major coding platforms including LeetCode, CodeChef, HackerRank, and GeeksforGeeks, reflecting consistent practice in Data Structures and Algorithms.",
+      subtitle: "📍 Coding Platforms",
+      description: "Achieved a milestone of solving 1009 problems with 613 active coding days across major coding platforms including LeetCode, CodeChef, HackerRank, and GeeksforGeeks.",
       image: profileCardImage,
       imageAlt: "Competitive Coding Profile Card",
-      footerLink: []
+      footer: []
     }
   ],
   display: true
@@ -354,8 +354,10 @@ const podcastSection = {
 // Contact Info Section
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "I am open to internships, collaborations, and software development opportunities."
+  subtitle: "Let's Build Something Impactful",
+  description: "If you're looking for a dedicated Full Stack Developer focused on clarity, performance, and scalable solutions, I would love to collaborate.",
+  email: "vanamakrishnateja0604@gmail.com",
+  linkedin: "https://www.linkedin.com/in/vanama-krishna-teja-1570642a0/"
 };
 
 // Twitter Section

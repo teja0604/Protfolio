@@ -133,10 +133,7 @@ function Header() {
             </a>
           </li>
           <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
+            <ToggleSwitch />
           </li>
         </ul>
       </header>
