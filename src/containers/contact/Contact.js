@@ -21,13 +21,12 @@ export default function Contact() {
     ).then(
       () => {
         alert("Message sent successfully!");
+        e.target.reset();
       },
       () => {
-        alert("Failed to send message.");
+        alert("Failed to send message. Please try again later.");
       }
     );
-
-    e.target.reset();
   };
 
   return (
@@ -64,7 +63,10 @@ export default function Contact() {
           </div>
         </div>
         <div className="contact-form-wrapper">
-          <form className="contact-form" onSubmit={sendEmail}>
+          <form 
+            className={`contact-form ${isDark ? "dark-mode-form" : "light-mode-form"}`} 
+            onSubmit={sendEmail}
+          >
             <div className="form-field">
               <input
                 type="text"
