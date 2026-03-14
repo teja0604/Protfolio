@@ -4,7 +4,6 @@ import "./AchievementCard.scss";
 export default function AchievementCard({cardInfo, isDark}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
-      console.log(`URL for ${name} not found`);
       return;
     }
     var win = window.open(url, "_blank");
