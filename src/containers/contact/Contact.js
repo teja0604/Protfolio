@@ -28,29 +28,31 @@ export default function Contact() {
   /* ---------- THEME STYLES ---------- */
 
   const formCardStyle = {
-    background: isDark ? "#181a1f" : "#fdfdfd",
+    background: isDark
+      ? "rgba(24,26,31,0.65)"
+      : "rgba(255,255,255,0.65)",
+    backdropFilter: "blur(20px)",
     boxShadow: isDark
       ? "0 10px 40px rgba(0,0,0,0.5)"
       : "0 10px 40px rgba(0,0,0,0.1)",
     border: isDark
-      ? "1px solid rgba(255,255,255,0.06)"
-      : "1px solid rgba(0,0,0,0.08)",
+      ? "1px solid rgba(255,255,255,0.1)"
+      : "1px solid rgba(0,0,0,0.12)",
   };
 
   const fieldStyle = {
-    width: "100%",
     display: "block",
     padding: "16px 20px",
-    borderRadius: "10px",
+    borderRadius: "12px",
     fontSize: "16px",
     fontFamily: "inherit",
     outline: "none",
     boxSizing: "border-box",
-    background: isDark ? "#232730" : "#ffffff",
+    background: isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.05)",
     color: isDark ? "#ffffff" : "#111111",
     border: isDark
-      ? "1px solid rgba(255,255,255,0.1)"
-      : "1px solid rgba(0,0,0,0.15)",
+      ? "1px solid rgba(255,255,255,0.2)"
+      : "1px solid rgba(0,0,0,0.1)",
   };
 
   const labelColor = isDark ? "#a0a0a0" : "#666666";

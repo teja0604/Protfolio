@@ -84,29 +84,22 @@
 /* ---- FORM WRAPPER ---- */
 
 .contact-form-wrapper {
-
   width: 100%;
-
   display: flex;
-
-  justify-content: flex-end;
-
+  justify-content: flex-start; /* align card to the left side of the right column */
+  align-items: center;
 }
 
 /* ---- FORM CARD ---- */
 
 .contact-form {
   width: 100%;
-  max-width: 600px;   /* was too small before */
-
-  padding: 40px;
-
-  border-radius: 20px;
-
+  max-width: 500px; /* increased width so form isn't too small */
+  padding: 40px 30px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
+  gap: 32px;
   box-sizing: border-box;
 }
 
@@ -114,17 +107,12 @@
 
 .contact-form input,
 .contact-form textarea {
-
   width: 100% !important;
-
   padding: 16px 20px;
-
-  border-radius: 10px;
-
+  border-radius: 12px;
   font-size: 16px;
-
   box-sizing: border-box;
-
+  background: transparent; /* actual background set inline */
 }
 
 /* placeholder */
@@ -132,6 +120,25 @@
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: $subTitle;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .contact-form-wrapper {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .contact-header {
+    align-items: center;
+    text-align: center;
+  }
+  .contact-subtitle {
+    max-width: 100%;
+  }
 }
 
 /* focus */
