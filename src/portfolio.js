@@ -252,7 +252,8 @@ const achievementSection = {
     {
       title: "Maths Club President",
       subtitle: "📍 Sathyabama University",
-      description: "Led the Sathyabama Math Club, organizing competitive events, fostering problem-solving skills, and coordinating mathematical activities for students.",
+      description:
+        "Led the Sathyabama Math Club, organizing competitive events, fostering problem-solving skills, and coordinating mathematical activities for students.",
       image: mathClubLogo,
       imageAlt: "Maths club",
       footer: []
@@ -260,7 +261,8 @@ const achievementSection = {
     {
       title: "MathArena",
       subtitle: "📍 Sathyabama University",
-      description: "Organized and coordinated MathArena, a competitive mathematics and problem-solving event conducted through the university Math Club.",
+      description:
+        "Organized and coordinated MathArena, a competitive mathematics and problem-solving event conducted through the university Math Club.",
       image: mathArena,
       imageAlt: "MathArena",
       footer: []
@@ -268,7 +270,8 @@ const achievementSection = {
     {
       title: "Luminary Award",
       subtitle: "📍 Sathyabama University",
-      description: "Received the Luminary Award for academic excellence, coding achievements, and contributions to student technical activities.",
+      description:
+        "Received the Luminary Award for academic excellence, coding achievements, and contributions to student technical activities.",
       image: luminaryAward,
       imageAlt: "LuminaryAward",
       footer: []
@@ -276,7 +279,8 @@ const achievementSection = {
     {
       title: "NPTEL Java Certification",
       subtitle: "📍 NPTEL / SWAYAM",
-      description: "Successfully completed the NPTEL Java Programming certification course with strong understanding of Java fundamentals and object-oriented programming.",
+      description:
+        "Successfully completed the NPTEL Java Programming certification course with strong understanding of Java fundamentals and object-oriented programming.",
       image: nptelJava,
       imageAlt: "NPTEL Java",
       footer: []
@@ -284,7 +288,8 @@ const achievementSection = {
     {
       title: "One Week One Program Winner",
       subtitle: "📍 Sathyabama University",
-      description: "Won the One Week One Program coding challenge by solving programming problems consistently throughout the competition.",
+      description:
+        "Won the One Week One Program coding challenge by solving programming problems consistently throughout the competition.",
       image: oneWeekOneProgram,
       imageAlt: "One Week Winner",
       footer: []
@@ -292,7 +297,8 @@ const achievementSection = {
     {
       title: "Competitive Coding Achievement",
       subtitle: "📍 Coding Platforms",
-      description: "Achieved a milestone of solving 1009 problems with 613 active coding days across major coding platforms including LeetCode, CodeChef, HackerRank, and GeeksforGeeks.",
+      description:
+        "Achieved a milestone of solving 1009 problems with 613 active coding days across major coding platforms including LeetCode, CodeChef, HackerRank, and GeeksforGeeks.",
       image: profileCardImage,
       imageAlt: "Competitive Coding Profile Card",
       footer: []
@@ -355,7 +361,8 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Let's Build Something Impactful",
-  description: "If you're looking for a dedicated Full Stack Developer focused on clarity, performance, and scalable solutions, I would love to collaborate.",
+  description:
+    "If you're looking for a dedicated Full Stack Developer focused on clarity, performance, and scalable solutions, I would love to collaborate.",
   email: "vanamakrishnateja0604@gmail.com",
   linkedin: "https://www.linkedin.com/in/vanama-krishna-teja-1570642a0/"
 };

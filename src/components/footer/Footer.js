@@ -15,7 +15,10 @@ export default function Footer() {
           Full Stack Developer • Building Scalable Digital Experiences
         </p>
         <div className="footer-contact">
-          <a href="mailto:vanamakrishnateja0604@gmail.com" className="footer-email">
+          <a
+            href="mailto:vanamakrishnateja0604@gmail.com"
+            className="footer-email"
+          >
             vanamakrishnateja0604@gmail.com
           </a>
         </div>

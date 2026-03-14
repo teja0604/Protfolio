@@ -51,14 +51,14 @@
 
 .footer-social {
   margin-bottom: 2.5rem;
-  
+
   .social-media-div {
     justify-content: center;
     gap: 1.5rem;
-    
+
     .icon-button {
       transition: transform 0.3s ease;
-      
+
       &:hover {
         transform: translateY(-5px);
       }

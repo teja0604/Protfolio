@@ -17,19 +17,19 @@ export default function AchievementCard({cardInfo, isDark}) {
   const handleMouseMove = e => {
     if (!cardRef.current) return;
     const {left, top, width, height} = cardRef.current.getBoundingClientRect();
-    
+
     // Calculate cursor position relative to the element's center from -1 to 1
     const x = (e.clientX - left) / width - 0.5;
     const y = (e.clientY - top) / height - 0.5;
-    
+
     // Set glare position using CSS variables
     const glareX = e.clientX - left;
     const glareY = e.clientY - top;
     cardRef.current.style.setProperty("--x", `${glareX}px`);
     cardRef.current.style.setProperty("--y", `${glareY}px`);
-    
+
     // Scale position to a subtle maximum rotation angle (15deg)
-    const rotateY = x * 30; 
+    const rotateY = x * 30;
     const rotateX = y * -30;
 
     setTransformStyle(
@@ -52,9 +52,15 @@ export default function AchievementCard({cardInfo, isDark}) {
       onMouseLeave={handleMouseLeave}
       style={{
         transform: transformStyle,
-        transition: transformStyle ? "none" : "transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease"
+        transition: transformStyle
+          ? "none"
+          : "transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease"
       }}
-      className={isDark ? "dark-mode certificate-card achievement-card" : "certificate-card achievement-card"}
+      className={
+        isDark
+          ? "dark-mode certificate-card achievement-card"
+          : "certificate-card achievement-card"
+      }
       data-aos="fade-up"
     >
       <div className="glare"></div>
@@ -67,7 +73,9 @@ export default function AchievementCard({cardInfo, isDark}) {
             {cardInfo.subtitle}
           </p>
         </div>
-        <p className={isDark ? "dark-mode card-description" : "card-description"}>
+        <p
+          className={isDark ? "dark-mode card-description" : "card-description"}
+        >
           {cardInfo.description}
         </p>
         <div className="certificate-button-div">

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./style.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -112,8 +112,20 @@ export default function CodeChefBlog() {
               Here is how a standard Fast I/O competitive programming template
               looks in Java to brutally shave milliseconds off execution time:
             </p>
-            <div className="code-block" style={{ fontSize: '0.9rem', borderRadius: '8px', overflow: 'hidden' }}>
-              <SyntaxHighlighter language="java" style={vscDarkPlus} showLineNumbers={true} wrapLines={true}>
+            <div
+              className="code-block"
+              style={{
+                fontSize: "0.9rem",
+                borderRadius: "8px",
+                overflow: "hidden"
+              }}
+            >
+              <SyntaxHighlighter
+                language="java"
+                style={vscDarkPlus}
+                showLineNumbers={true}
+                wrapLines={true}
+              >
                 {`import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;

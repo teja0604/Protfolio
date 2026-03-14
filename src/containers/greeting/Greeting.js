@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import { TypeAnimation } from 'react-type-animation';
+import {TypeAnimation} from "react-type-animation";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
@@ -16,9 +16,9 @@ export default function Greeting() {
     return null;
   }
   return (
-    <div className="greet-main" id="greeting" style={{ position: "relative" }}>
+    <div className="greet-main" id="greeting" style={{position: "relative"}}>
       <ParticleBackground isDark={isDark} />
-      <div className="greeting-main" style={{ position: "relative", zIndex: 1 }}>
+      <div className="greeting-main" style={{position: "relative", zIndex: 1}}>
         <div className="greeting-text-div">
           <div>
             <h1
@@ -28,13 +28,24 @@ export default function Greeting() {
               {greeting.title} <span className="wave-emoji">{emoji("👋")}</span>
             </h1>
             {greeting.roles && (
-              <div className={isDark ? "dark-mode greeting-text-p" : "greeting-text-p subTitle"} style={{ marginTop: '0.5rem', marginBottom: '1rem' }}>
+              <div
+                className={
+                  isDark
+                    ? "dark-mode greeting-text-p"
+                    : "greeting-text-p subTitle"
+                }
+                style={{marginTop: "0.5rem", marginBottom: "1rem"}}
+              >
                 <TypeAnimation
                   sequence={greeting.roles}
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
-                  style={{ fontSize: '1.2em', display: 'inline-block', fontWeight: 'bold' }}
+                  style={{
+                    fontSize: "1.2em",
+                    display: "inline-block",
+                    fontWeight: "bold"
+                  }}
                 />
               </div>
             )}

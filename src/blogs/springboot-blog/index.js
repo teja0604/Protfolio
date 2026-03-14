@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./style.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -125,8 +125,20 @@ export default function SpringBootBlog() {
               Here is how clean and declarative a REST controller looks in
               Spring Boot:
             </p>
-            <div className="code-block" style={{ fontSize: '0.9rem', borderRadius: '8px', overflow: 'hidden' }}>
-              <SyntaxHighlighter language="java" style={vscDarkPlus} showLineNumbers={true} wrapLines={true}>
+            <div
+              className="code-block"
+              style={{
+                fontSize: "0.9rem",
+                borderRadius: "8px",
+                overflow: "hidden"
+              }}
+            >
+              <SyntaxHighlighter
+                language="java"
+                style={vscDarkPlus}
+                showLineNumbers={true}
+                wrapLines={true}
+              >
                 {`import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./style.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -125,8 +125,20 @@ export default function ReactSpringFullstackBlog() {
               Here is the architectural bridge! First, an Axios interceptor
               injecting the JWT Authorization automatically:
             </p>
-            <div className="code-block" style={{ fontSize: '0.9rem', borderRadius: '8px', overflow: 'hidden' }}>
-              <SyntaxHighlighter language="javascript" style={vscDarkPlus} showLineNumbers={true} wrapLines={true}>
+            <div
+              className="code-block"
+              style={{
+                fontSize: "0.9rem",
+                borderRadius: "8px",
+                overflow: "hidden"
+              }}
+            >
+              <SyntaxHighlighter
+                language="javascript"
+                style={vscDarkPlus}
+                showLineNumbers={true}
+                wrapLines={true}
+              >
                 {`import axios from 'axios';
 
 // Creating a localized instance targeting the Spring Boot backend

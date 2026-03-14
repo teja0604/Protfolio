@@ -3,7 +3,6 @@ import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress";
-import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
 import Achievement from "./achievement/Achievement";
 import Journey from "./journey/Journey";
@@ -43,7 +42,6 @@ const Main = () => {
           <Skills />
           <StackProgress />
           <Education />
-          <Projects />
           <StartupProject />
           <Journey />
           <Achievement />

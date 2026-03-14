@@ -3,12 +3,12 @@ import "./Progress.scss";
 import {illustration, techStack} from "../../portfolio";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import { useInView } from "react-intersection-observer";
+import {useInView} from "react-intersection-observer";
 
 export default function StackProgress() {
-  const { ref, inView } = useInView({
+  const {ref, inView} = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.2
   });
   if (techStack.viewSkillBars) {
     return (

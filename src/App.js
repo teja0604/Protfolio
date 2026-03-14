@@ -10,7 +10,7 @@ import {HashRouter, Route, Switch} from "react-router-dom";
 import {StyleProvider} from "./contexts/StyleContext";
 import {useLocalStorage} from "./hooks/useLocalStorage";
 import Chatbot from "./components/chatbot/Chatbot";
-import { useEffect } from "react";
+import {useEffect} from "react";
 
 function App() {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");

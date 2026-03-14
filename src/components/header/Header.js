@@ -65,8 +65,8 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <div 
-          className={isDark ? "menu-overlay dark-overlay" : "menu-overlay"} 
+        <div
+          className={isDark ? "menu-overlay dark-overlay" : "menu-overlay"}
           onClick={() => {
             const menuBtn = document.getElementById("menu-btn");
             if (menuBtn) {

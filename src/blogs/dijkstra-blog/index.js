@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./style.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -126,8 +126,20 @@ export default function DijkstraBlog() {
               Here is a basic implementation of Dijkstra's Algorithm in Java
               using a PriorityQueue:
             </p>
-            <div className="code-block" style={{ fontSize: '0.9rem', borderRadius: '8px', overflow: 'hidden' }}>
-              <SyntaxHighlighter language="java" style={vscDarkPlus} showLineNumbers={true} wrapLines={true}>
+            <div
+              className="code-block"
+              style={{
+                fontSize: "0.9rem",
+                borderRadius: "8px",
+                overflow: "hidden"
+              }}
+            >
+              <SyntaxHighlighter
+                language="java"
+                style={vscDarkPlus}
+                showLineNumbers={true}
+                wrapLines={true}
+              >
                 {`import java.util.*;
 
 class Node implements Comparable {
