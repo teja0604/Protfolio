@@ -39,7 +39,7 @@ const greeting = {
   subTitle:
     "Motivated Computer Science student passionate about Java backend development and problem solving. Experienced in building applications using Spring Boot and React, and actively strengthening algorithmic skills with a 500+ day CodeChef streak.",
   resumeLink:
-    "https://drive.google.com/file/d/1fWE0cLTiCJFRBIe-NcVFYjFBCPlYkKC-/view?usp=drive_link",
+    "https://drive.google.com/file/d/1fWE0cLTiCJFRBIe-NcVFYjFBCPlYkKC-/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
